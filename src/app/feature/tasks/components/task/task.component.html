@@ -1,0 +1,18 @@
+<div class="task neu">
+  <div class="task__header">
+    <h4 class="task__header--title">{{task.title}}</h4>
+  </div>
+  <hr class="task__divider">
+  <div class="task__content">
+    <p *ngIf="task.description" class="task__content--description text-body">{{task.description}}</p>
+    <p *ngIf="!task.description" class="task__content--no-description text-body text-italic">(No description)</p>
+  </div>
+  <div class="task__actions">
+    <button (click)="emitEdit()" class="task__actions--edit neu icon-button">
+      <span class="material-symbols-rounded">edit</span>
+    </button>
+    <button (click)="emitDelete()" class="task__actions--delete neu icon-button">
+      <span class="material-symbols-rounded warn">delete</span>
+    </button>
+  </div>
+</div>

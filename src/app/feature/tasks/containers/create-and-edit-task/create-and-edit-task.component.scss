@@ -1,0 +1,45 @@
+@use 'colors/colors';
+
+$block: 'create-and-edit-task';
+
+%form-field {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  h5 {
+    margin-left: 8px;
+    margin-bottom: 12px;
+  }
+}
+
+.#{$block} {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    &--title {
+      margin-top: 0;
+    }
+  }
+
+  &__content {
+    &__form {
+      &--title-control {
+        @extend %form-field;
+      }
+      &--description-control {
+        @extend %form-field;
+        textarea {
+          resize: none;
+          height: 120px;
+        }
+      }
+    }
+  }
+  &__actions {
+    position: absolute;
+    bottom: 24px;
+    z-index: 1;
+    right: 40px;
+  }
+}

@@ -1,0 +1,60 @@
+@use 'colors/colors';
+button {
+  display: inline-flex;
+  color: colors.$text-color;
+  padding: 0.7em 1.7em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &.icon-button {
+    padding: 0.7em;
+    border-radius: 50px;
+
+    span {
+      background: transparent;
+    }
+  }
+
+  &.accent-button {
+    background: colors.$accent-color;
+    span {
+      color: colors.$white;
+    }
+  }
+
+  &:hover {
+    border: 1px solid colors.$white;
+  }
+  &:active {
+    &:not(:disabled) {
+      box-shadow: inset 6px 6px 12px #{colors.$silver}, inset -4px -4px 12px #{colors.$white};
+      &.accent-button {
+        box-shadow: inset 6px 6px 12px #{colors.$brandy-punch}, inset -4px -4px 12px #{colors.$sunglow};
+      }
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    &:not(.accent-button) {
+      span {
+        color: colors.$silver;
+      }
+    }
+  
+    &.accent-button {
+      background-color: colors.$golden-sand;
+    }
+
+  }
+
+  &.big-button {
+    padding: 1.2em;
+      span {
+        font-size: 28px;
+      }
+  }
+
+}
+

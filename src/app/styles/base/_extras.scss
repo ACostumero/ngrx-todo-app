@@ -1,0 +1,28 @@
+@use 'colors/colors';
+.neu {
+  background: colors.$mercury;
+  border: 1px solid colors.$mercury;
+  box-shadow: 6px 6px 12px colors.$silver, -6px -6px 12px colors.$white;
+}
+
+.neu-inset {
+  box-shadow: inset 6px 6px 12px colors.$silver, inset -6px -6px 12px colors.$white;
+}
+
+.warn {
+  color: colors.$tomato;
+}
+
+.text-body {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.text-caption {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.text-italic {
+  font-style: italic;
+}

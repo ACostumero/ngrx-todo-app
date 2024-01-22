@@ -1,0 +1,18 @@
+<div class="tasks">
+  <div class="tasks__actions">
+    <button class="tasks__actions--new neu icon-button accent-button big-button" [routerLink]="[APP_ROUTES.ADD_TASK]">
+      <span class="material-symbols-rounded">add</span>
+    </button>
+  </div>
+  <div class="tasks__header">
+    <h2 class="tasks__header--title">Your pendings</h2>
+  </div>
+  <div class="tasks__content">
+    <ng-container *ngFor="let task of tasks$ | async">
+      <app-task 
+      [task]="task"
+      (clickEdit)="onClickEdit($event)"
+      (clickDelete)="onClickDelete($event)"></app-task>
+    </ng-container>
+  </div>
+</div>

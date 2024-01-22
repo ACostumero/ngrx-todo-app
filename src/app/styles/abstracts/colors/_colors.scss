@@ -1,0 +1,21 @@
+$background-color: var(--background-color);
+$text-color: var(--color);
+$header-background: var(--header-background);
+$accent-color: var(--accent-color);
+
+$cod-gray: #090909;
+$silver: #c5c5c5;
+$mercury: #e8e8e8;
+$white: #ffffff;
+$tomato: tomato;
+$tulip-tree: #edaa35;
+$brandy-punch: #c9912d;
+$sunglow: #ffc43d;
+$golden-sand: #f7cc80;
+
+:root {
+  --background-color: #{$mercury};
+  --color: #{$cod-gray};
+  --header-background: #{$white};
+  --accent-color: #{$tulip-tree};
+}

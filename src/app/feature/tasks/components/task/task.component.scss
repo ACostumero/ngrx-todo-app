@@ -1,0 +1,44 @@
+@use 'variables/layout';
+@use 'colors/colors';
+@use 'mixins/text';
+$block: 'task';
+
+.#{$block} {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: layout.$task-width;
+  height: layout.$task-height;
+  border-radius: 8px;
+
+  &__header {
+    display: flex;
+    &--title {
+      margin: 0;
+      @include text.truncate(2);
+    }
+  }
+
+  &__divider {
+    width: 66%;
+    margin-inline: 0;
+    margin-block: 16px 0;
+    border-color: transparent;
+    border-top-color: colors.$mercury;
+  }
+
+  &__content {
+    flex-grow: 1;
+    p {
+      @include text.truncate(4);
+    }
+    
+  }
+
+  &__actions {
+    display: flex;
+    gap: 16px;
+    align-self: flex-end;
+  }
+
+}

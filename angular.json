@@ -32,6 +32,14 @@
             "styles": [
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/styles",
+                "src/app/styles/abstracts",
+                "src/app/styles/base",
+                "src/app/styles/components"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -95,6 +103,14 @@
             "styles": [
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/styles",
+                "src/app/styles/abstracts",
+                "src/app/styles/base",
+                "src/app/styles/components"
+              ]
+            },
             "scripts": []
           }
         }

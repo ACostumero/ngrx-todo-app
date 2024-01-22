@@ -1,0 +1,24 @@
+@use 'colors/colors';
+
+%form-field {
+   border: none;
+   padding: 1rem;
+   border-radius: 8px;
+   transition: 0.3s;
+   outline-color: transparent;
+   line-height: 1.5;
+}
+
+%form-field-focus {
+   outline-color: colors.$white;
+   transition: 0.3s;
+}
+
+input, textarea {
+   @extend %form-field;
+   &:focus,
+   &:focus-visible {
+      @extend %form-field-focus;
+      box-shadow: inset 6px 6px 12px #{colors.$silver}, inset -4px -4px 12px #{colors.$white};
+   }
+ }

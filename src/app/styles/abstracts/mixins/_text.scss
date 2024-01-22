@@ -1,0 +1,13 @@
+@use 'browser';
+
+@mixin truncate($clamp: null) {
+  overflow: hidden;
+  @if ($clamp) {
+    display: -webkit-box;
+    word-break: break-word;
+    @include browser.prefix((line-clamp: $clamp, box-orient: vertical), (webkit));
+  } @else {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

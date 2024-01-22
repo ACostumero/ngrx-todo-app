@@ -1,0 +1,32 @@
+<div class="create-and-edit-task">
+  <div class="create-and-edit-task__header">
+    <h2 class="create-and-edit-task__header--title">{{ isEditMode ? 'Edit' : 'New' }} task</h2>
+  </div>
+  <div class="create-and-edit-task__content">
+    <form [formGroup]="taskForm" class="create-and-edit-task__content__form">
+      <!-- TODO: Add form content -->
+      <div class="create-and-edit-task__content__form--title-control">
+        <h5>Title</h5>
+        <input 
+          class="neu" 
+          formControlName="title" 
+          [placeholder]="'Place your title here (' + TITLE_MAX_LENGTH + ' Char. max.)'" />
+      </div>
+      
+      <div class="create-and-edit-task__content__form--description-control">
+        <h5>Description</h5>
+        <textarea 
+          class="neu" 
+          formControlName="description"
+          rows="8"
+          
+          [placeholder]="'Write a description (' + DESCRIPTION_MAX_LENGTH + ' Char. max.)'"></textarea>
+      </div>
+    </form>
+  </div>
+  <div class="create-and-edit-task__actions">
+    <button class="create-and-edit-task__actions--save neu icon-button big-button accent-button" [disabled]="taskForm.invalid" type="button" (click)="save()">
+      <span class="material-symbols-rounded">save</span>
+    </button>
+  </div>
+</div>

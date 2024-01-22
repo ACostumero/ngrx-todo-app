@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'main';
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: main.$font-family;
+  background: main.$background-color;
+  color: main.$text-color;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+

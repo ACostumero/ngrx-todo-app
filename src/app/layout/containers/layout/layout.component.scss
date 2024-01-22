@@ -1,0 +1,41 @@
+@use "variables/layout";
+@use "colors/colors";
+$block: 'layout';
+
+.#{$block} {
+  height: 100vh;
+
+  &__header {
+    position: sticky;
+    top: 0;
+    height: layout.$header-height;
+    background: colors.$header-background;
+    &__wrapper {
+      background: transparent;
+      display: flex;
+      height: 100%;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+
+      &--logo {
+        height: 38px;
+        background: transparent;
+      }
+  
+      &--title {
+        margin: 0;
+        background: transparent;
+      }
+
+    }
+    
+  }
+  
+  &__main {
+    padding-inline: layout.$layout-content-padding-inline;
+    padding-block: layout.$layout-content-padding-block;
+    overflow: hidden;
+    height: calc(100vh - #{layout.$header-height} - (#{layout.$layout-content-padding-block} * 2));
+  }
+}
