@@ -35,6 +35,7 @@ $block: 'layout';
   &__main {
     padding-inline: layout.$layout-content-padding-inline;
     padding-block: layout.$layout-content-padding-block;
+    padding-inline-end: 0;
     overflow: hidden;
     height: calc(100vh - #{layout.$header-height} - (#{layout.$layout-content-padding-block} * 2));
   }

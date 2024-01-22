@@ -1,6 +1,4 @@
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
-import { TasksActions } from '@app-state/tasks/tasks.actions';
-import { Store } from '@ngrx/store';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-layout',

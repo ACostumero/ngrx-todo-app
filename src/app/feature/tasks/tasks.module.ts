@@ -13,7 +13,6 @@ import { taskFeatureName, tasksReducer } from '@app-state/tasks/tasks.reducer';
 import { TasksComponent } from '@app-feature/tasks/containers/tasks/tasks.component';
 import { TaskComponent } from '@app-feature/tasks/components/task/task.component';
 import { CreateAndEditTaskComponent } from '@app-feature/tasks/containers/create-and-edit-task/create-and-edit-task.component';
-import { TaskDetailComponent } from '@app-feature/tasks/components/task-detail/task-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     TasksComponent,
     TaskComponent,
     CreateAndEditTaskComponent,
-    TaskDetailComponent
   ],
   imports: [
     CommonModule,

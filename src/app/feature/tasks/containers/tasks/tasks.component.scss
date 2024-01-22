@@ -21,6 +21,7 @@ $block: 'tasks';
     flex-wrap: wrap;
     gap: 40px 24px;
     padding-bottom: 40px;
+    padding-inline-end: layout.$layout-content-padding-inline;
   }
 
   &__actions {
